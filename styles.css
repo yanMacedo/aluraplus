@@ -1,0 +1,162 @@
+
+/* declaração de variaveis para facilitar o trabalho com as cores
+
+*/
+:root{
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167BF7 ;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter";
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size:16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/**/
+.principal{
+    background-image: url("img/Background.png");
+    /*isso evitou um espelhamento da parte inferior da imagem */
+    background-repeat: no-repeat;
+    /*isso fez o background conter todo o container da section
+    (tira o espacinho)*/
+    background-size: contain;
+    /* aqui nós vamos alinhar todos os elementos da seção */
+    align-items: center ;
+    text-align: center;
+
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container__botao{
+    background-color: var(--botao-azul);
+   /* usamos border-radius para arredondar as bordas do background do container*/ 
+    border-radius: 5px ;
+    color: var(--branco-principal);
+    padding: 1em;
+    /*isso aq ela usou p/ mudar o container, q estava na mesma linha, p/ baixo 
+    dos textos... n entendi bem... */
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+.botao__secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+.container__imagem{
+    margin: 1em 0 2em 0 ;
+}
+.container__caixa{
+    margin: 0 6em;
+}
+
+.secundario__imagem{
+    width: 88%;
+}
+.secundario{
+    margin: 0 10em;
+    align-items: center;
+}
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 1em;
+}
+.descricao__texto{
+    font-weight:400;
+    font-size: 16px;
+    color: var(--cinza-secundario);
+}
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+.container__descricao{
+    padding: 2em;
+}
+.dispositivos__lista{
+    /*esse recurso deixa os elementos da lista na 
+    horizontal */
+    display: flex;
+    /*centraliza*/
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+.dispositivos{
+    text-align: center;
+}
+.titulo__item{
+    font-size:32px;
+    font-weight: 700;
+}
+.dispositivos__titulo{
+    font-size:48px;
+    font-weight: 700;
+}
+.lista__rodape a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__rodape{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 2em 2em;
+    font-size:16px;
+    font-weight:400;
+}
+
+.rodape{
+    text-align: center;
+}
+.texto__rodape{
+    font-size:14px;
+    font-weight:400;
+    color: var(--cinza-secundario);
+    margin-bottom: 1em;
+}
+
+/*OS PRÓXIMOS 2 RECURSOS (hover & active) SÃO 
+PSEUDOCLASSES. */
+
+/*esse recurso faz a cor do link mudar quando 
+o cursor do mouse passar sobre ele. */
+.lista__rodape a:hover{
+    color: var(--botao-azul);
+}
+/* esse faz mudar de cor quando clica-se no link.*/
+.lista__rodape a:active {
+    color:darkgreen;
+}
+/*Mesma ideia, de imediatamente à cima, para os botões*/
+.container__botao:hover{
+    background-color: rgb(190, 76, 76);
+    color: blueviolet;
+}
+
